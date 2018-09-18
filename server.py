@@ -24,7 +24,9 @@ def score():
     # orders = Orders.query.first()
     today_orders = Orders.query.filter(Orders.created >= datetime.today().date())
     print(today_orders.count())
+    count_today_orders = today_orders.count()
     unconfirmed_orders = today_orders.filter(Orders.confirmed==None)
+    count_unconfirmed_orders = unconfirmed_orders.count()
     print('UCONFIRMED ORDERS: {}'.format(unconfirmed_orders.count()))
     print(unconfirmed_orders)
     if unconfirmed_orders.count() > 0:
@@ -36,11 +38,15 @@ def score():
         print(timedelta_score)
         score_minutes = timedelta_score.seconds/60
         print(score_minutes)
-        print('{}:{}'.format(timedelta_score.seconds//60, timedelta_score.seconds%60))
+        print('Your team score is {}:{}'.format(timedelta_score.seconds//60, timedelta_score.seconds%60))
     else:
         score_minutes = 0
+
     # Here will be a call of color function
-    return render_template('score.html')
+    return render_template('score_screen.html',
+                           score_minutes=score_minutes,
+                           count_unconfirmed_orders=count_unconfirmed_orders,
+                           count_today_orders=count_today_orders)
 
 
 if __name__ == "__main__":
