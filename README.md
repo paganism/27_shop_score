@@ -1,6 +1,23 @@
 # Shop Score Page
 
-{TODO. There will be project description}
+This [site](http://80.211.16.55:8001) shows max wait time in online store. Site refreshes every 10 seconds.
+Layout of this site is sutable for all type of screens.
+
+# Deploy on localhost
+
+Linux:
+```bash
+$ export FLASK_APP=server.py
+$ export SECRET_KEY='your secret key'
+```
+For debug mode use variable FLASK_DEBUG=1
+```
+$ export FLASK_DEBUG=1
+$ flask run
+```
+
+Then open the page [localhost:5000](http://localhost:5000) in browser.
+
 
 # Project Goals
 
