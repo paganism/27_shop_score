@@ -11,6 +11,3 @@ def get_score_color(score_minutes):
     else:
         return '#FF0000'
 
-
-# if __name__ == "__main__":
-#     print(get_score_color(0))
