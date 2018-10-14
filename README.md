@@ -1,6 +1,6 @@
 # Shop Score Page
 
-This [site](http://80.211.16.55) shows max wait time in online store. Site refreshes every 10 seconds.
+This [site](http://80.211.16.55:8005) shows max wait time in online store. Site refreshes every 10 seconds.
 Layout of this site is sutable for all type of screens (laptops, smartphones etc).
 
 # Deploy on localhost
