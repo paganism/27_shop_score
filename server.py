@@ -24,7 +24,7 @@ def score():
         max_wait_time = timedelta(minutes=0)
     score_color = get_score_color(max_wait_time)
     printed_max_wait_time = max_wait_time - timedelta(microseconds=max_wait_time.microseconds)
-    return render_template('score_screen2.html',
+    return render_template('score_screen.html',
                            score_minutes=printed_max_wait_time,
                            count_unconfirmed_orders=count_unconfirmed_orders,
                            count_today_orders=count_today_orders,
